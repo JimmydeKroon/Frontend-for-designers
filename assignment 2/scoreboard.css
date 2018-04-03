@@ -1,0 +1,142 @@
+body {
+  background-color: #2d3436;
+}
+
+h1 {
+  text-align: center;
+  color: #747d8c;
+  opacity: 0.35;
+  font-family: Cerebri-sans, sans-serif;
+  font-size: 80px;
+}
+
+#PlayerName1, #PlayerName2, #PlayerName3 {
+  opacity: 0;
+}
+
+#namebutton1, #namebutton2, #namebutton3 {
+  opacity: 0;
+}
+
+#info-button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 90em;
+  top: 5.5em;
+}
+
+#info-field {
+  display: none;
+  width: 335px;
+  height: 482px;
+  z-index: 1;
+  left: 71.5em;
+  top: 9.5em;
+  opacity: 0.93;
+}
+
+p {
+  font-size: 27px;
+  color: #747d8c;
+  font-family: Cerebri-sans, sans-serif;
+  text-transform: uppercase;
+}
+
+.playerboxes {
+  text-align: center;
+}
+
+.box_player1 {
+  display: inline-block;
+  width: 30%;
+}
+
+.box_player1 > svg {
+  fill: #ff7675;
+}
+
+.box_player2 {
+  display: inline-block;
+  width: 30%;
+}
+
+.box_player2 > svg {
+  fill: #55efc4;
+}
+
+.box_player3 {
+  display: inline-block;
+  width: 30%;
+}
+
+.box_player3 > svg {
+  fill: #74b9ff;
+}
+
+svg {
+  width: 80px;
+  height: 80px;
+}
+
+img {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+}
+
+.points:hover {
+  opacity: 0.8;
+  height: 41px;
+  width: 61px;
+}
+
+#score1 {
+  font-size: 85px;
+}
+
+#score2 {
+  font-size: 85px;
+}
+
+#score3 {
+  font-size: 85px;
+}
+
+#downbutton1 {
+  top: 36.5em;
+  left: 18.1em;
+}
+
+#upbutton1 {
+  top: 26.5em;
+  left: 18.1em;
+}
+
+#downbutton2 {
+  top: 36.5em;
+  left: 48.1em;
+}
+
+#upbutton2 {
+  top: 26.5em;
+  left: 48.1em;
+}
+
+#downbutton3 {
+  top: 36.5em;
+  left: 78.1em;
+}
+
+#upbutton3 {
+  top: 26.5em;
+  left: 78.1em;
+}
+
+.bouncegreen {
+  color: #55efc4;
+}
+
+.bouncered {
+  color: #ff7675;
+}
