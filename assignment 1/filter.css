@@ -1,0 +1,146 @@
+body {
+  background-color: #2d3436;
+}
+
+h1 {
+  font-family: Cerebri Sans, sans-serif;
+  text-align: center;
+  margin-top: 1em;
+  color: #dfe6e9;
+}
+
+h2 {
+  font-family: Cerebri Sans, sans-serif;
+  text-align: center;
+  color: #dfe6e9;
+}
+
+.colorresize {
+  height: 60px;
+  width: 60px;
+}
+
+.photoscontainer {
+  padding-top: 25px;
+}
+
+.photos {
+  width: 400px;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+  border-style: solid;
+  border-width: 0.15em;
+  border-color: #dfe6e9;
+  transition: all 2s ease;
+}
+
+.line {
+  height: 1px;
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+#redbutton {
+  height: 85px;
+  width: 85px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#orangebutton {
+  height: 85px;
+  width: 85px;
+  background-color: #e67e22;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#yellowbutton {
+  height: 85px;
+  width: 85px;
+  background-color: #feca57;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#greenbutton {
+  height: 85px;
+  width: 85px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#bluebutton {
+  height: 85px;
+  width: 85px;
+  background-color: #2980b9;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#purplebutton {
+  height: 85px;
+  width: 85px;
+  background-color: #8e44ad;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#pinkbutton {
+  height: 85px;
+  width: 85px;
+  background-color: #f368e0;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1em;
+  transition: all 1s ease;
+}
+
+#allbutton {
+  height: 85px;
+  width: 85px;
+  background-color: #dfe6e9;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0;
+  transition: all 1s ease;
+}
+
+.colors {
+  overflow: auto;
+  white-space: nowrap;
+  background-color: #2d3436;
+  padding: 16px 16px;
+}
+
+.colorreturn {
+  position: fixed;
+  left: 27.8em;
+  top: 40em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
