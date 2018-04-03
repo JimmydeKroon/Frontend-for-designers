@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FFD Spotify</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login">
+        <h1>Login with your Spotify account</h1>
+        <a href="/login" class="btn-primary">Login</a>
+        <div id="legalnotice">
+          <p>*This application will give you the ability to see and manipulate your playlists in spotify, note that all changes made will be permanent and applied to your actual spotify account</p>
+        </div>
+      </div>
+      <div id="loggedin">
+        <div id="user-profile">
+        </div>
+        <div id="oauth">
+        </div>
+        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+      </div>
+    </div>
+
+    <div id="playlists">
+
+    </div>
+
+    <div id="tracks">
+      <h2>Pick a playlist to reveal the tracks inside!</h2>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+      (function() {
+
+        /**
+         * Obtains parameters from the hash of the URL
+         * @return Object
+         */
+        function getHashParams() {
+          var hashParams = {};
+          var e, r = /([^&;=]+)=?([^&;]*)/g,
+              q = window.location.hash.substring(1);
+          while ( e = r.exec(q)) {
+             hashParams[e[1]] = decodeURIComponent(e[2]);
+          }
+          return hashParams;
+        }
+
+        var params = getHashParams();
+
+        var access_token = params.access_token,
+            refresh_token = params.refresh_token,
+            error = params.error;
+
+
+        // playlist api call
+        if (error) {
+          alert('There was an error during the authentication');
+        } else {
+          if (access_token) {
+            $.ajax({
+                url: 'https://api.spotify.com/v1/me/playlists',
+                headers: {
+                  'Authorization': 'Bearer ' + access_token
+                },
+                success: function(response) {
+                  document.getElementsByTagName('body')[0].style.backgroundSize = "100% 450px";
+                  document.getElementsByTagName('h2')[0].style.display = "block";
+                  //console.log(response.items);
+                  for(var i = 0; i < response.items.length; i++){
+
+                    var showPlaylist = $('#playlists').append(function(){
+                      return $("<li data-id='"+response.items[i].tracks.href+"' style='margin-bottom:35px; list-style:none; color:#CECECE; '><img width='280px' src='" + response.items[i].images[0].url  +"'/>" + "<div class='litext'>" + "<p>" + response.items[i].name + "</p>" + "</div>" + "</li>").click(clickedFunction)
+                    })
+
+                  }
+                }
+            });
+
+          } else {
+              // render initial screen
+              $('#login').show();
+              $('#loggedin').hide();
+          }
+        }
+
+        // after click on playlist
+        function clickedFunction(e){
+          document.getElementById('tracks').style.marginTop = "550px";
+
+          var list = document.getElementById('playlists').getElementsByTagName('img')
+          for (var item of list) {
+            item.style.border = "none";
+          }
+
+          this.firstChild.style.border = "4px solid #1db954";
+
+          // api call , tracks
+          console.log($(this).data('id'));
+          $.ajax({
+              url: $(this).data('id'),
+              headers: {
+                'Authorization': 'Bearer ' + access_token
+              },
+              success: function(response) {
+                document.getElementById('tracks').innerHTML = "";
+                $("#tracks").append("<h3>Title</h3>");
+                $("#tracks").append("<h4>Artist</h4>");
+
+                document.getElementById('tracks').style.marginTop = "550px";
+                setTimeout(function(){
+                  document.getElementById('tracks').style.marginTop = "50px";
+                }, 800);
+
+                //document.getElementById('tracks').style.marginTop = "50px";
+
+                //console.log(response.items)
+                for (var i = 0; i < response.items.length; i++) {
+
+                  var showTracks = $('#tracks').append(function(){
+                    return $("<div class='trackline'>" + [i+1]+"." + "<div class='tracklinename'>" + "<p>" + response.items[i].track.name + "</p>" + "</div>" + " " + "<div class='tracklineartist'>" + "<p>" + response.items[i].track.artists[0].name + "</p>" + "</div>" + "</div>" + "<br>")
+
+                  })
+
+                  //console.log(response.items[i].track.artists[0].name);
+                }
+
+              }
+          });
+        }
+
+        var playlists = document.querySelector('#playlists');
+        var sticky = playlists.offsetTop;
+
+
+
+        window.onscroll = function() {stickyheader()};
+
+        function stickyheader() {
+          if (window.pageYOffset >= sticky + 105) {
+            //console.log(window.pageYOffset)
+            playlists.classList.add("sticky")
+
+            document.getElementById('tracks').style.paddingTop = "470px"
+            document.getElementById('playlists').style.backgroundColor = "#282828"
+
+            var playlisttext = document.getElementsByClassName('litext')
+            for (var item of playlisttext) {
+              item.style.fontSize = "14px";
+            }
+
+            var playlistimg = document.getElementById('playlists').getElementsByTagName('img')
+            for (var item of playlistimg) {
+              item.style.width = "100px";
+            }
+          }
+          else {
+            playlists.classList.remove("sticky")
+            document.getElementById('tracks').style.paddingTop = "50px"
+            document.getElementById('playlists').style.backgroundColor = "transparent"
+
+            var playlisttext = document.getElementsByClassName('litext')
+            for (var item of playlisttext) {
+              item.style.fontSize = "28px";
+            }
+
+            var playlistimg = document.getElementById('playlists').getElementsByTagName('img')
+            for (var item of playlistimg) {
+              item.style.width = "280px";
+            }
+          }
+        }
+
+
+
+      })();
+
+
+    </script>
+  </body>
+</html>
