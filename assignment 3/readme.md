@@ -4,12 +4,12 @@ In this readme you can read information about my last assignment for FFD.
 The assignment consists of a web app (desktop) that shows data gathered from the spotify API.
 The user can login with their own spotify account and see their personal playlists and songs.
 
-**Important, for this to work on your computer you need node
-- copy all files from github
-- navigate to the main folder trough the terminal (on mac you can use "cd")
-- install (npm install)
+**Important, for this to work on your computer you need node**
+**- copy all files from github**
+**- navigate to the main folder trough the terminal (on mac you can use "cd")**
+**- install (npm install)**
 
-You should have a extra folder now with node modules**
+**You should have a extra folder now with node modules**
 
 Name: Jimmy de Kroon
 StudNr: 500716228
