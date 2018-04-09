@@ -14,6 +14,8 @@ The user can login with their own spotify account and see their personal playlis
 
 **You should have a extra folder now with node modules**
 
+---
+
 Name: Jimmy de Kroon
 
 StudNr: 500716228
@@ -157,10 +159,10 @@ This code adds or removes the css class "sticky" while scrolling, sticky makes t
 
 ## Sources
 
-[Spotify Api information](https://developer.spotify.com/web-api/)
-[More spotify Api information](https://beta.developer.spotify.com/documentation/)
+- [Spotify Api information](https://developer.spotify.com/web-api/)
+- [More spotify Api information](https://beta.developer.spotify.com/documentation/)
 
-[Pexels stock photo's (free)](https://www.pexels.com/)
+- [Pexels stock photo's (free)](https://www.pexels.com/)
 
-[w3schools.com](https://www.w3schools.com/)
-[Stackoverflow.com](https://stackoverflow.com/)
+- [w3schools.com](https://www.w3schools.com/)
+- [Stackoverflow.com](https://stackoverflow.com/)
