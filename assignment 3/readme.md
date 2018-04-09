@@ -15,7 +15,9 @@ The user can login with their own spotify account and see their personal playlis
 **You should have a extra folder now with node modules**
 
 Name: Jimmy de Kroon
+
 StudNr: 500716228
+
 Teacher: Koop Reynders
 
 ![](loginscreen.png)
@@ -48,7 +50,7 @@ All playlists will be shown horizontally, the user can scroll trough their playl
 For this assignment we need to make sure we follow 3 of the 19 principles of UI design. [link to principles!](http://bokardo.com/principles-of-user-interface-design/)
 
 #### 04. Keep users in control
-      > Humans are most comfortable when they feel in control of themselves and their environment. Thoughtless software takes away that comfort by forcing people into unplanned interactions, confusing pathways, and surprising outcomes. Keep users in control by regularly surfacing system status, by describing causation (if you do this that will happen) and by giving insight into what to expect at every turn. Don't worry about stating the obvious…the obvious almost never is.
+> Humans are most comfortable when they feel in control of themselves and their environment. Thoughtless software takes away that comfort by forcing people into unplanned interactions, confusing pathways, and surprising outcomes. Keep users in control by regularly surfacing system status, by describing causation (if you do this that will happen) and by giving insight into what to expect at every turn. Don't worry about stating the obvious…the obvious almost never is.
 
 In the above gif you can see how the interface behaves during the selection of a playlist.
 Before the user selected anything there will be a text on screen telling the user what to do ("pick a playlist to show what is inside").
@@ -58,13 +60,13 @@ After picking a playlist the tracks inside the chosen playlist will appear. The 
 ![](fadein.gif)
 
 #### 09. Appearance follows behavior
-      > Humans are most comfortable with things that behave the way we expect. Other people, animals, objects, software. When someone or something behaves consistently with our expectations we feel like we have a good relationship with it. To that end designed elements should look like how they behave. Form follows function. In practice this means that someone should be able to predict how an interface element will behave merely by looking at it. If it looks like a button it should act like a button. Don't get cute with the basics of interaction…keep your creativity for higher order concerns.
+> Humans are most comfortable with things that behave the way we expect. Other people, animals, objects, software. When someone or something behaves consistently with our expectations we feel like we have a good relationship with it. To that end designed elements should look like how they behave. Form follows function. In practice this means that someone should be able to predict how an interface element will behave merely by looking at it. If it looks like a button it should act like a button. Don't get cute with the basics of interaction…keep your creativity for higher order concerns.
 
 The playlists are buttons, but this is not really clear enough. That's why there is a text when there is no playlist selected. After a click on a playlist it will actually behave as a button, because now it is selected (green border).
 The user now understands how the app works so the text is not needed anymore
 
 #### 11. Strong visual hierarchies work best
-      > A strong visual hierarchy is achieved when there is a clear viewing order to the visual elements on a screen. That is, when users view the same items in the same order every time. Weak visual hierarchies give little clue about where to rest one's gaze and end up feeling cluttered and confusing. In environments of great change it is hard to maintain a strong visual hierarchy because visual weight is relative: when everything is bold, nothing is bold. Should a single visually heavy element be added to a screen, the designer may need to reset the visual weight of all elements to once again achieve a strong hierarchy. Most people don't notice visual hierarchy but it is one of the easiest ways to strengthen (or weaken) a design.
+> A strong visual hierarchy is achieved when there is a clear viewing order to the visual elements on a screen. That is, when users view the same items in the same order every time. Weak visual hierarchies give little clue about where to rest one's gaze and end up feeling cluttered and confusing. In environments of great change it is hard to maintain a strong visual hierarchy because visual weight is relative: when everything is bold, nothing is bold. Should a single visually heavy element be added to a screen, the designer may need to reset the visual weight of all elements to once again achieve a strong hierarchy. Most people don't notice visual hierarchy but it is one of the easiest ways to strengthen (or weaken) a design.
 
 ![](menuscale.gif)
 
